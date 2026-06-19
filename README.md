@@ -1,64 +1,51 @@
-Duikt Telegram Shop Bot
+# Duikt Telegram Shop Bot
+Моє перше замовлення. Телеграм бот для зручнішого управління онлайн магазином. Додаток виконаний на замовлення.
 
-Description
+## Скріншоти додатку
+1. Головне меню для користувачів
+![Головне меню для користувачів](images/users_menu.jpg)
 
-A Telegram bot for managing an online store with support for product catalog, orders, and admin panel.
-Users can browse products and make purchases directly in Telegram, while administrators can manage the store.
+2. Головне меню для адмінів
+![Головне меню для адмінів](images/admin_menu.jpg)
 
-Features
+3. Вигляд чеку для адмінів
+![Вигляд чеку для адмінів](images/admin_check.jpg)
 
-- Product catalog with browsing and purchasing
-- Shopping cart and order processing
-- Admin panel for managing products
-- Interactive keyboards for удобної навігації
-- SQLite database for storing products and orders
-- Middleware for request processing
-- Role-based filters for different user types
-- Asynchronous handling using asyncio
+## Стек технологій
+1. **Функціонал** - Python + aiogram 3.13
+2. **База данних** - SQLite
 
-Tech Stack
+## Функціонал
+1. Для користувачів
+  - Перегляд товарів по категоріях
+  - Створення та редагування замовлень із переглядом чеків
+  - Можливість вибору способу оплати та доставки
+2. Для адмінів
+  - Зручна адмін панель для
+    1) Додавання товарів
+    2) Видалення товарів
+    3) Зміна фото товару
+    4) Додавання категорії товарів
+    5) Видалення категорії товарів
+    6) Зміна інформації про товар
+    7) Система відкриття та закриття магазину
 
-- Python 3.8+
-- aiogram / python-telegram-bot
-- SQLite
-- asyncio
-
-Installation & Run
-
-1. Clone the repository:
-   git clone https://github.com/YOUR_USERNAME/tg_bot.git
-
-2. Go to the project folder:
-   cd tg_bot
-
-3. Install dependencies:
-   pip install -r requirements.txt
-
-4. Create ".env" file:
-   BOT_TOKEN=your_telegram_bot_token
-   ADMIN_IDS=123456789,987654321
-   DATABASE_URL=sqlite:///true_detective.db
-
-5. Run the bot:
-   python bot_main.py
-
-How It Works
-
-- Initialization
-  The bot connects to the database and registers handlers.
-
-- Request flow
-  User request → filters → middleware → handler logic
-
-- Database
-  Data is stored in SQLite for fast and reliable access.
-
-- Interaction
-  Custom keyboards improve navigation and UX.
-
-- Async processing
-  The bot handles multiple requests concurrently using asyncio.
-
-Notes
-
-This project demonstrates backend development skills, working with Telegram Bot API, asynchronous programming, and basic application architecture.
+## Локальний запуск
+1. Клонувати репозиторій 
+```bash
+git clone https://github.com/daniyilamelin/DUIKT_Shop
+```
+2. В папці проекту встановити залежності
+```bash
+pip install -r requirements.txt
+```
+3. Створити файл .env та заповнити його совїми даними
+```python
+TOKEN=
+ADMIN_ID=
+DB_PATH=
+```
+4. Запустити проект
+```bash
+python main.py
+```
